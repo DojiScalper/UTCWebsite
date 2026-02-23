@@ -1,0 +1,233 @@
+:root {
+  --bg: #f3f7fc;
+  --surface: #ffffff;
+  --surface-alt: #e8f0fa;
+  --text: #0f1f32;
+  --muted: #49607a;
+  --line: #cfdaea;
+  --accent: #0f4c81;
+  --accent-strong: #0b3a63;
+  --max: 1080px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  line-height: 1.65;
+  color: var(--text);
+  background:
+    radial-gradient(760px 430px at 88% -120px, rgba(15, 76, 129, 0.13) 0%, rgba(15, 76, 129, 0) 68%),
+    radial-gradient(680px 380px at -5% -90px, rgba(80, 146, 198, 0.11) 0%, rgba(80, 146, 198, 0) 65%),
+    var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-strong);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Sora", "Manrope", sans-serif;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  max-width: 20ch;
+  margin-bottom: 0.9rem;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.08rem;
+  margin-bottom: 0.45rem;
+}
+
+.wrap {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(7px);
+  position: sticky;
+  top: 0;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+
+.brand {
+  font-family: "Sora", "Manrope", sans-serif;
+  font-size: 1.02rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 1.15rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section {
+  padding: 3.15rem 0;
+}
+
+.section-alt {
+  background: var(--surface-alt);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero {
+  padding-top: 4.6rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.lead {
+  color: var(--muted);
+  margin: 0;
+  max-width: 66ch;
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 1.1rem;
+  box-shadow:
+    0 10px 24px rgba(9, 21, 35, 0.05),
+    0 2px 10px rgba(9, 21, 35, 0.03);
+}
+
+.kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.cta p {
+  margin: 0.5rem 0 0;
+}
+
+.prose {
+  max-width: 78ch;
+}
+
+.prose p {
+  margin: 0;
+}
+
+.publication-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.pub-item {
+  padding: 1.2rem;
+}
+
+.pub-item h3 {
+  margin-bottom: 0.6rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding: 1.1rem 0 1.4rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 3.6rem;
+  }
+}
