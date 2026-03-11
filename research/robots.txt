@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dojiscalper.github.io/UTCWebsite/research/sitemap.xml
+Sitemap: https://ultimatetechnologyconsulting.com/research/sitemap.xml
