@@ -159,6 +159,7 @@ h3 {
 
 .hero {
   padding: 5rem 0 3rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(233, 240, 248, 0.3) 100%);
 }
 
 .hero-wrap {
