@@ -291,6 +291,11 @@ h3 {
   margin-top: 0.9rem;
 }
 
+.ongoing-list {
+  display: grid;
+  gap: 0.78rem;
+}
+
 .year-tags {
   display: flex;
   flex-wrap: wrap;
